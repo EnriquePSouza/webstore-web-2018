@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+.lobster{
+    font-family: 'Lobster';
+}
+
+.medium-text {
+    font-size: 1.5em;
+}
+
+.larger-text {
+    font-size: 3em;
+}
