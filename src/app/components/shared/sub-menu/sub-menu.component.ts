@@ -16,7 +16,7 @@ export class SubMenuComponent implements OnInit {
       this.totalItems = data.length;
     });
 
-    var data: any = JSON.parse(localStorage.getItem('mws.user'));
+    var data: any = JSON.parse(localStorage.getItem('ws.user'));
     if (data) {
       this.user = data.name;
     }
@@ -28,8 +28,8 @@ export class SubMenuComponent implements OnInit {
   }
 
   logout() {
-    localStorage.removeItem('mws.token');
-    localStorage.removeItem('mws.user');
+    localStorage.removeItem('ws.token');
+    localStorage.removeItem('ws.user');
     this.router.navigateByUrl('/');
   }
 }

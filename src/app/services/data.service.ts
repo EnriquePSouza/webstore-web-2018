@@ -24,7 +24,7 @@ export class DataService {
     }
 
     getProducts() {
-        var token = localStorage.getItem('mws.token');
+        var token = localStorage.getItem('ws.token');
         let headers = new Headers({ 'Content-Type': 'application/json' });
         headers.append('Authorization', `Bearer ${token}`); Headers
         let options = new RequestOptions({ headers: headers });
@@ -34,7 +34,7 @@ export class DataService {
     }
 
     createOrder(data: any) {
-        var token = localStorage.getItem('mws.token');
+        var token = localStorage.getItem('ws.token');
         let headers = new Headers({ 'Content-Type': 'application/json' });
         headers.append('Authorization', `Bearer ${token}`); Headers
         let options = new RequestOptions({ headers: headers });

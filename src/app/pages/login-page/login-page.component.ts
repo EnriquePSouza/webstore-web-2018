@@ -28,7 +28,7 @@ export class LoginPageComponent implements OnInit {
       ])]
     });
 
-    var token = localStorage.getItem('mws.token');
+    var token = localStorage.getItem('ws.token');
     if (token) {
       this.router.navigateByUrl('/home');
     }
@@ -50,8 +50,8 @@ export class LoginPageComponent implements OnInit {
     this.dataService
       .authenticate(this.form.value)
       .subscribe(result => {
-        localStorage.setItem('mws.token', result.token);
-        localStorage.setItem('mws.user', JSON.stringify(result.user));
+        localStorage.setItem('ws.token', result.token);
+        localStorage.setItem('ws.user', JSON.stringify(result.user));
 
         this.router.navigateByUrl('/home');
       }, error => {

@@ -34,7 +34,7 @@ export class CartPageComponent implements OnInit {
   }
 
   checkout() {
-    var user = JSON.parse(localStorage.getItem('mws.user'));
+    var user = JSON.parse(localStorage.getItem('ws.user'));
     var data = {
       customerId: user.id,
       deliveryFee: this.deliveryFee,

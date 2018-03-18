@@ -21,7 +21,7 @@ export class CartService {
         } else {
             this.items.push(item);
         }
-        localStorage.setItem('mws.cart', JSON.stringify(this.items));
+        localStorage.setItem('ws.cart', JSON.stringify(this.items));
         this.cartChangeObserver.next(this.items);
     }
 
@@ -45,11 +45,11 @@ export class CartService {
     }
 
     save() {
-        localStorage.setItem('mws.cart', JSON.stringify(this.items));
+        localStorage.setItem('ws.cart', JSON.stringify(this.items));
     }
 
     getItems(): any[] {
-        var data = localStorage.getItem('mws.cart');
+        var data = localStorage.getItem('ws.cart');
         if (data) {
             this.items = JSON.parse(data);
         }
@@ -58,7 +58,7 @@ export class CartService {
     }
 
     load() {
-        var data = localStorage.getItem('mws.cart');
+        var data = localStorage.getItem('ws.cart');
         if (data) {
             this.items = JSON.parse(data);
         }
@@ -67,7 +67,7 @@ export class CartService {
 
     clear() {
         this.items = [];
-        localStorage.removeItem('mws.cart');
+        localStorage.removeItem('ws.cart');
         this.cartChangeObserver.next(this.items);
     }
 
@@ -78,7 +78,7 @@ export class CartService {
                 this.items.splice(index, 1);
             }
         }
-        localStorage.setItem('mws.cart', JSON.stringify(this.items));
+        localStorage.setItem('ws.cart', JSON.stringify(this.items));
         this.cartChangeObserver.next(this.items);
     }
 

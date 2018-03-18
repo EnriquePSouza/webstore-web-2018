@@ -7,7 +7,7 @@ export class AuthService implements CanActivate {
     }
 
     canActivate() {
-        if (!localStorage.getItem('mws.token')) {
+        if (!localStorage.getItem('ws.token')) {
             this.router.navigate(['/']);
             return false;
         }
