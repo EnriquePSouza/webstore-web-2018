@@ -10,7 +10,7 @@ import { AuthService } from './services/auth.service';
 
 const appRoutes: Routes = [
     { path: '', component: LoginPageComponent },
-    { path: 'home', component: HomePageComponent },
+    { path: 'home',  canActivate: [AuthService], component: HomePageComponent },
     { path: 'signup', component: SignupPageComponent },
     { path: 'cart', canActivate: [AuthService], component: CartPageComponent },
 ];

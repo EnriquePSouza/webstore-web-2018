@@ -27,17 +27,15 @@ export class LoginPageComponent implements OnInit {
         Validators.required
       ])]
     });
+  }
 
+  ngOnInit() {
     var token = localStorage.getItem('ws.token');
     if (token) {
       this.router.navigateByUrl('/home');
     }
   }
 
-  ngOnInit() {
-
-  }
-  
   showModal() {
     this.ui.setActive('modal');
   }
