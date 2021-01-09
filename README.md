@@ -8,6 +8,10 @@ Before execute the server command, access the application folder and execute the
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+To stop the server, execute the command: `netstat -ano | findstr :4200` with this command you receive an PID. 
+
+Use the PID in this command: `taskkill /PID <PID> /F` to end the server.
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
